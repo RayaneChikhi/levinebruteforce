@@ -35,7 +35,7 @@ possible_hat_configs = tuple(product([0, 1], repeat=n))
 total_strategies = n ** (2 ** n)
 vn = 2**n
 dn = 2**(2*n)
-optimalProbability = 0.34375
+optimalProbability = 0.34765625    
 best_probability, numOptimalStrats, optimalStrategies = bruteforce(n, optimalProbability)
 print(f"Best success probability for n={n}: {best_probability}")
 print("Number of optimal strategies (modulo the first value and the last one):", numOptimalStrats)
