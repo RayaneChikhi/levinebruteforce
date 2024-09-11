@@ -1,6 +1,6 @@
 from itertools import product
 from random import randint
-n = 5
+n = 7
 total_strategies = n ** (2 ** n)
 vn = 2**n
 un = vn*vn
@@ -37,7 +37,7 @@ def hillclimb(numIter,numRestarts):
     initial_strategy = None
     global_max_strategy = initial_strategy
     global_max_prob = 0
-    for _ in range(numRestarts):
+    while True:
         initial_strategy = [1] + [randint(1,n) for i in range(un-2)] + [1]
         v = tuple(initial_strategy)
         if v in seen:
@@ -74,7 +74,7 @@ def hillclimb(numIter,numRestarts):
 
 
         
-hillclimb(1000000,500)
+hillclimb(10000000,500)
 
 
 
