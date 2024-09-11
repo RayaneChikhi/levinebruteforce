@@ -59,9 +59,9 @@ def hillclimb(numIter,numRestarts):
                 local_max_prob = cur_prob
                 if local_max_prob > global_max_prob:
                     if local_max_prob > 0.27:
-                        print("New local max probability at iteration:", iter, ", restart number: ", _, "equal to :", local_max_prob, " with strategy: ", potential_new_strategy)
+                        print("New local max probability at iteration:", iter, ",  "equal to :", local_max_prob, " with strategy: ", potential_new_strategy)
                     else:
-                        print("New local max probability at iteration:", iter, ", restart number: ", _, "equal to :", local_max_prob)
+                        print("New local max probability at iteration:", iter, ", "equal to :", local_max_prob)
                     global_max_prob = local_max_prob
                     global_max_strategy = potential_new_strategy
             else:
@@ -74,7 +74,7 @@ def hillclimb(numIter,numRestarts):
 
 
         
-hillclimb(10000000,500)
+hillclimb(12000000,500)
 
 
 
